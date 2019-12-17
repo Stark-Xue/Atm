@@ -1,0 +1,13 @@
+dic = {}
+					acc_id = input("\tinput the account id: ")
+					while True:
+						acc_pwd = input("\tinput the account password: ")
+						acc_pwd2 = input("\tinput the account password again: ")
+						if acc_pwd == acc_pwd2:
+							dic["id"] = acc_id
+							dic["password"] = acc_pwd
+							accounts.dump_account(dic)
+							print("成功注册用户[%s]" % acc_id)
+						else:
+							print("两次密码不一样，请重新输入密码")
+							continue
